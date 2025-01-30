@@ -1,0 +1,115 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+html {
+  --mingule: #eeab1c;
+  --minblaa: #0e0030;
+  --minhvide: #ffffff;
+  background-color: var(--minhvide);
+}
+
+/* Index */
+
+.kategoriliste {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1px;
+  padding-top: 3rem;
+}
+
+.kategoriliste a {
+  font-family: "franchise";
+  background-color: #0e0030;
+  color: var(--minhvide);
+  -webkit-text-stroke: 0.8px var(--minblaa);
+  text-decoration: none;
+  font-size: 2rem;
+  padding: 3.5rem;
+  text-align: center;
+  background-color: var(--minblaa);
+  transition: 0.4s;
+}
+
+.kategoriliste a:hover {
+  background-image: none;
+  font-family: "franchise";
+  color: var(--minhvide);
+  text-decoration: none;
+  font-size: 2.2rem;
+  padding: 2.5rem;
+  text-align: center;
+  background-color: var(--minblaa);
+}
+
+@media screen and (min-width: 1050px) {
+  .kategoriliste {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 1px;
+    padding-top: 3rem;
+  }
+
+  .kategoriliste a {
+    font-family: "franchise";
+    background-color: #0e0030;
+    color: var(--minhvide);
+    -webkit-text-stroke: 0.8px var(--minblaa);
+    text-decoration: none;
+    font-size: 4rem;
+    padding: 6rem;
+
+    text-align: center;
+    background-color: var(--minblaa);
+
+    transition: 0.4s;
+  }
+
+  .kategoriliste a:hover {
+    background-image: none;
+    font-family: "franchise";
+    color: var(--minhvide);
+    text-decoration: none;
+    font-size: 5rem;
+    padding: 5.5rem;
+    text-align: center;
+    background-color: var(--minblaa);
+  }
+}
+
+.apparel {
+  background-image: url(https://kea-alt-del.dk/t7/images/webp/640/1572.webp);
+}
+
+.footwear {
+  background-image: url(https://kea-alt-del.dk/t7/images/webp/640/3546.webp);
+  background-position: center;
+}
+
+.accesories {
+  background-image: url(https://kea-alt-del.dk/t7/images/webp/640/2585.webp);
+  background-position: center;
+}
+
+.personalcare {
+  background-image: url(https://kea-alt-del.dk/t7/images/webp/640/2280.webp);
+  background-position: center;
+}
+
+.sportinggoods {
+  background-image: url(https://kea-alt-del.dk/t7/images/webp/640/1164.webp);
+  background-position: center;
+}
+
+.freeitems {
+  background-image: url(https://kea-alt-del.dk/t7/images/webp/640/8653.webp);
+  background-position: -150px;
+}
