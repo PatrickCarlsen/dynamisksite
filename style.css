@@ -32,10 +32,6 @@ html {
 
 /* Header */
 
-.orange {
-  color: var(--minorange);
-}
-
 header {
   align-items: center;
   justify-content: space-between;
@@ -62,7 +58,6 @@ nav a:hover {
 
 header h1 {
   font-family: "formula";
-  color: var(-);
 }
 
 @media screen and (min-width: 1050px) {
@@ -98,6 +93,11 @@ header a {
 }
 
 /* Index */
+
+h2 {
+  font-family: "formula";
+  font-size: 200%;
+}
 
 .kategoriliste {
   display: grid;
