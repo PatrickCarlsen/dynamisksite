@@ -9,13 +9,39 @@ img {
   height: auto;
   display: block;
 }
-
+/* Overordnet */
 html {
   --mingule: #eeab1c;
   --minblaa: #0e0030;
   --minhvide: #ffffff;
   --minorange: #ffa500;
   background-color: var(--minhvide);
+}
+
+/* Overordnet */
+
+h1 {
+  color: var(--minblaa);
+  font-family: "formula";
+  font-size: 8rem;
+}
+
+h2 {
+  color: var(--minblaa);
+  font-family: "formula";
+  font-size: 5rem;
+  margin: 1rem;
+  margin-left: 2rem;
+}
+
+h3 {
+  font-family: "formula";
+  font-size: 1.5rem;
+  color: var(--minblaa);
+}
+
+p {
+  font-family: Arial, Helvetica, sans-serif;
 }
 
 /* Fonts */
@@ -56,10 +82,6 @@ nav a:hover {
   padding: 0.5rem;
 }
 
-header h1 {
-  font-family: "formula";
-}
-
 @media screen and (min-width: 1050px) {
   header {
     display: flex;
@@ -93,11 +115,6 @@ header a {
 }
 
 /* Index */
-
-h2 {
-  font-family: "formula";
-  font-size: 200%;
-}
 
 .kategoriliste {
   display: grid;
@@ -187,4 +204,269 @@ h2 {
 .freeitems {
   background-image: url(https://kea-alt-del.dk/t7/images/webp/640/8653.webp);
   background-position: -150px;
+}
+
+/* Produktliste */
+.produktliste {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(150px, 300px));
+  gap: 5rem;
+  margin-left: 7vw;
+  margin-right: 7vw;
+}
+
+.produkt {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.produkt h3 {
+  flex-grow: 1;
+  text-decoration: none;
+}
+
+.pris span {
+  display: none;
+}
+
+.rabat .pris span {
+  display: block;
+}
+
+.discount {
+  display: none;
+}
+
+.rabat .discount {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.rabat .discount p:last-child {
+  color: var(--minblaa);
+  background-color: var(--mingule);
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+
+.udsolgt a {
+  display: none;
+}
+
+.udsolgtbillede {
+  display: none;
+}
+
+.udsolgt img {
+  display: none;
+}
+
+.udsolgt .udsolgtbillede {
+  display: block;
+}
+
+.produktliste a {
+  text-decoration: none;
+  background-color: var(--minblaa);
+  color: var(--minhvide);
+  font-family: "vercetti";
+  font-size: 1.5rem;
+  text-align: center;
+  transition: 0.5s;
+  border-radius: 10px;
+  padding: 10px;
+  margin-top: 10px;
+  border: var(--minblaa) solid 2px;
+}
+.produktliste a:hover {
+  text-decoration: none;
+  background-color: var(--minhvide);
+  color: var(--minblaa);
+  font-family: "vercetti";
+  text-align: center;
+  border: var(--minblaa) solid 2px;
+}
+
+/* Produktside */
+.produktmain {
+  margin-left: 7vw;
+  margin-right: 7vw;
+}
+
+.produktmain h3 {
+  margin: 2rem;
+  font-size: 3rem;
+}
+
+.produktmain p {
+  font-size: 1.5rem;
+}
+
+form {
+  font-family: "vercetti";
+  color: var(--minblaa);
+  margin-top: 2rem;
+}
+
+.udsolgt .kobnu {
+  display: none;
+}
+
+.kobnu {
+  display: grid;
+  background-color: var(--minblaa);
+  border: 2px solid var(--minblaa);
+  margin-top: 2rem;
+  padding: 1rem;
+  padding-top: 0rem;
+  border-radius: 10px;
+}
+
+label {
+  color: var(--minhvide);
+  font-size: 1.5rem;
+  font-family: "vercetti";
+}
+
+select {
+  color: var(--minblaa);
+  background-color: var(--minhvide);
+  font-size: 1.5rem;
+  min-width: 120px;
+  border-radius: 10px;
+  border: var(--minhvide) solid 2px;
+  font-family: "vercetti";
+}
+
+option {
+  font-family: "vercetti";
+}
+
+label {
+  display: flex;
+  justify-content: space-between;
+}
+
+button {
+  text-decoration: none;
+  background-color: var(--minhvide);
+  color: var(--minblaa);
+  font-family: "vercetti";
+  font-size: 1.5rem;
+  text-align: center;
+  transition: 0.5s;
+  border-radius: 10px;
+  padding: 10px;
+  margin-top: 10px;
+  border: var(--minhvide) solid 2px;
+  margin: auto;
+}
+
+button:hover {
+  text-decoration: none;
+  background-color: var(--minblaa);
+  color: var(--minhvide);
+  font-family: "vercetti";
+  text-align: center;
+  border: var(--minhvide) solid 2px;
+}
+
+@media screen and (min-width: 1050px) {
+  .produktmain {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    column-gap: 50px;
+  }
+
+  .produktmain h2 {
+    grid-column: 1 / 3;
+    font-size: 5rem;
+  }
+
+  .produktmain img {
+    grid-column: 1;
+  }
+
+  .info {
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+    padding-bottom: 8rem;
+  }
+
+  .produktmain h3 {
+    margin: 0;
+    margin-top: 2rem;
+    font-size: 1.5rem;
+  }
+
+  .produktmain p {
+    margin: 0;
+    font-size: 1rem;
+  }
+
+  form {
+    font-family: "vercetti";
+    color: var(--minblaa);
+    margin-top: 2rem;
+  }
+
+  .kobnu {
+    background-color: var(--minblaa);
+    border: 2px solid var(--minblaa);
+    margin-top: 2rem;
+    padding: 1rem;
+    padding-top: 0rem;
+    border-radius: 10px;
+  }
+
+  label {
+    color: var(--minhvide);
+    font-size: 1.5rem;
+    font-family: "vercetti";
+  }
+
+  select {
+    color: var(--minblaa);
+    background-color: var(--minhvide);
+    font-size: 1rem;
+    min-width: 120px;
+    border-radius: 10px;
+    border: var(--minhvide) solid 2px;
+    font-family: "vercetti";
+  }
+
+  option {
+    font-family: "vercetti";
+  }
+
+  label {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  button {
+    text-decoration: none;
+    background-color: var(--minhvide);
+    color: var(--minblaa);
+    font-family: "vercetti";
+    font-size: 1rem;
+    text-align: center;
+    transition: 0.5s;
+    border-radius: 10px;
+    padding: 5px;
+    margin-top: 10px;
+    border: var(--minhvide) solid 2px;
+  }
+
+  button:hover {
+    text-decoration: none;
+    background-color: var(--minblaa);
+    color: var(--minhvide);
+    font-family: "vercetti";
+    text-align: center;
+    border: var(--minhvide) solid 2px;
+  }
 }
