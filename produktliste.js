@@ -12,9 +12,11 @@ function showList(data) {
     .map(
       (product) =>
         `
-      <article class="produkt ${product.discount && "rabat"} ${product.soldout && "udsolgt"}">
-    <img src="https://kea-alt-del.dk/t7/images/webp/640/${product.id}.webp" alt="${product.productdisplayname}" />
-          <img class="udsolgtbillede" src="udsolgt.webp" alt="Sold out" />
+      <article class="produkt ${product.discount && "rabat"}">
+        <div class="billede-container">
+          <img src="https://kea-alt-del.dk/t7/images/webp/640/${product.id}.webp" alt="${product.productdisplayname}" />
+          <img class="udsolgtbillede ${product.soldout && "udsolgt"}" src="udsolgt.webp" alt="Sold out" />
+        </div>
           <h3>${product.productdisplayname}</h3>
           <p class="pris">
             <span>Previously</span>
@@ -24,7 +26,7 @@ function showList(data) {
             <p>Now DKK ${Math.round(product.price - (product.price / 100) * product.discount)},-</p>
             <p>${product.discount}%</p>
           </div>
-          <a href="produkt.html?id=${product.id}">Buy now</a>
+          <a class="${product.soldout && "skjult"}"" href="produkt.html?id=${product.id}">Buy now</a>
         </article>`
     )
     .join("");
