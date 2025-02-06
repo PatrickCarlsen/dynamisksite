@@ -270,6 +270,7 @@ header a {
 .billede-container {
   display: grid;
   place-items: center;
+  cursor: pointer;
 }
 
 .billede-container img:first-child {
@@ -317,14 +318,6 @@ header a {
 .produktmain {
   margin-left: 7vw;
   margin-right: 7vw;
-}
-
-.produktmain .udsolgt {
-  grid-row: 2;
-}
-
-.produktmain img {
-  grid-row: 2;
 }
 
 .produktmain h3 {
